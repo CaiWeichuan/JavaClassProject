@@ -2,29 +2,29 @@ package javaproject_1;
 import java.sql.*;
 
 public class LoginAdmin {
-	//AdminµÇÂ½
+	//Adminç™»é™†
 	public static void main(String[] args) {
 		
-		//Á¬½ÓÊı¾İ¿â
+		//è¿æ¥æ•°æ®åº“
 		
 		try{
-            //µ÷ÓÃClass.forName()·½·¨¼ÓÔØÇı¶¯³ÌĞò
+            //è°ƒç”¨Class.forName()æ–¹æ³•åŠ è½½é©±åŠ¨ç¨‹åº
             Class.forName("com.mysql.jdbc.Driver");
-            System.out.println("³É¹¦¼ÓÔØMySQLÇı¶¯£¡");
+            System.out.println("æˆåŠŸåŠ è½½MySQLé©±åŠ¨ï¼");
         }catch(ClassNotFoundException e1){
-            System.out.println("ÕÒ²»µ½MySQLÇı¶¯!");
+            System.out.println("æ‰¾ä¸åˆ°MySQLé©±åŠ¨!");
             e1.printStackTrace();
         }
 		
 		Connection conn;
-		String url="jdbc:mysql://localhost:3306/mydb2? useUnicode=true&characterEncoding=utf-8&useSSL=false";    //JDBCµÄURL 
+		String url="jdbc:mysql://localhost:3306/mydb2? useUnicode=true&characterEncoding=utf-8&useSSL=false";    //JDBCçš„URL 
 		try {
             conn = DriverManager.getConnection(url, "root","635241xx");
             
-            System.out.println("³É¹¦Á¬½Óµ½Êı¾İ¿â£¡");
+            System.out.println("æˆåŠŸè¿æ¥åˆ°æ•°æ®åº“ï¼");
             
             
-            Statement stmt = conn.createStatement(); //´´½¨Statement¶ÔÏó
+            Statement stmt = conn.createStatement(); //åˆ›å»ºStatementå¯¹è±¡
             ResultSet rs = stmt.executeQuery("select*from flight");
             while (rs.next()) {
             	for (int i = 1; i <11 ; i++) {
@@ -43,7 +43,6 @@ public class LoginAdmin {
 	}
 
 	
-	
-	
+		
 
 }
