@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class theMain {
 
 	public static void main(String[] args) {
-		//Ö÷½çÃæ
+		//ä¸»ç•Œé¢
 		
 		
 		LoginAdmin.Admin_id=null;
@@ -17,7 +17,7 @@ public class theMain {
 		
 		
 		
-		//Ê×Ò³µÄÑ¡Ôñ
+		//é¦–é¡µçš„é€‰æ‹©
 		System.out.println("Enter the number");
 		System.out.println("1.login for Admin, 2.Query Flight Information, 3.login for passenger"
 				+ " 4.register an account");
@@ -28,7 +28,7 @@ public class theMain {
 		switch (First_num) {
 		case 1:
 			
-			//¹ÜÀíÔ±Ñ¡Ïî
+			//ç®¡ç†å‘˜é€‰é¡¹
 			
 			System.out.println("Admin ID:");
 			LoginAdmin.Admin_id = input.nextLine();
@@ -37,7 +37,7 @@ public class theMain {
 			
 			if (LoginAdmin.checkAdmin() ==true) {
 				try {
-					//Ä¿Ç°Ö»Ìí¼ÓÁË´´½¨º½°à¹¦ÄÜ
+					//ç›®å‰åªæ·»åŠ äº†åˆ›å»ºèˆªç­åŠŸèƒ½
 					
 					Admin.createFlight();
 				} catch (ParseException e) {
@@ -51,13 +51,13 @@ public class theMain {
 
 		case 2:
 			
-			//ÎŞÕËºÅÆÕÍ¨²éÑ¯Ñ¡Ïî
-			
+			//æ— è´¦å·æ™®é€šæŸ¥è¯¢é€‰é¡¹
+			queryFlight.query();
 			break;
 		
 		case 3:
 			
-			//ÆÕÍ¨ÕË»§Ñ¡Ïî
+			//æ™®é€šè´¦æˆ·é€‰é¡¹
 			
 			System.out.println("identity ID: ");
 			LoginPassenger.pa_id = input.nextLine();
@@ -66,9 +66,9 @@ public class theMain {
 			if (LoginPassenger.checkPassenger()==true) {
 				try {
 					
-					//´ı½¨
+					//å¾…å»º
 					
-					Admin.createFlight();//´ËĞĞ´úÂëÔİÊ±ÓÃÀ´´ÕÊı¡£¡£
+					Admin.createFlight();//æ­¤è¡Œä»£ç æš‚æ—¶ç”¨æ¥å‡‘æ•°ã€‚ã€‚
 				} catch (ParseException e) {
 					
 					e.printStackTrace();
@@ -79,7 +79,7 @@ public class theMain {
 			
 		case 4:
 			
-			//×¢²áÆÕÍ¨ÕËºÅ
+			//æ³¨å†Œæ™®é€šè´¦å·
 			
 		}
 		
