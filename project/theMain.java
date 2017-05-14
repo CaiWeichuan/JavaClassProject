@@ -37,9 +37,20 @@ public class theMain {
 			
 			if (LoginAdmin.checkAdmin() ==true) {
 				try {
-					//目前只添加了创建航班功能
-					
-					Admin.createFlight();
+					//目前只添加了创建航班功能、创建新管理员功能
+					Scanner a1 = new Scanner(System.in);
+					System.out.println("Enter the number to chose:");
+					System.out.println("1.create new flight 2.create new Admin");
+					int chose1 = a1.nextInt();
+					switch (chose1) {
+					case 1:
+						Admin.createFlight();
+						break;
+					case 2:
+						Admin.createAdmin();
+						break;
+					default:
+						break;
 				} catch (ParseException e) {
 					
 					e.printStackTrace();
