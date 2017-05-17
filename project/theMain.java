@@ -7,7 +7,12 @@ public class theMain {
 
 	public static void main(String[] args) {
 		//主界面
-		
+		try {
+			UpdataMain.updata();
+		} catch (ParseException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		
 		LoginAdmin.Admin_id=null;
 		LoginAdmin.Admin_password=null;
