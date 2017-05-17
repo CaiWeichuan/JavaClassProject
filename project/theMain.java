@@ -21,7 +21,7 @@ public class theMain {
 		LoginPassenger.pa_password=null;
 		
 		
-		
+ 		
 		//首页的选择
 		System.out.println("Enter the number");
 		System.out.println("1.login for Admin, 2.Query Flight Information, 3.login for passenger"
@@ -45,7 +45,7 @@ public class theMain {
 					//目前只添加了创建航班功能、创建新管理员功能
 					Scanner a1 = new Scanner(System.in);
 					System.out.println("Enter the number to chose:");
-					System.out.println("1.create new flight 2.create new Admin");
+					System.out.println("1.create new flight 2.create new Admin 3.delete flight");
 					int chose1 = a1.nextInt();
 					switch (chose1) {
 					case 1:
@@ -53,6 +53,9 @@ public class theMain {
 						break;
 					case 2:
 						Admin.createAdmin();
+						break;
+					case 3:
+						deleteFlight.delete();
 						break;
 					default:
 						break;
